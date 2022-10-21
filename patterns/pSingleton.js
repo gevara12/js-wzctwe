@@ -3,7 +3,8 @@
  coordinate all actions across the system
 */
 
-const Singleton = (function () {
+// es5
+var Singleton = (function () {
   var instance;
 
   function createInstance() {
@@ -24,5 +25,24 @@ const Singleton = (function () {
 var instanceFirst = Singleton.getInstance();
 var instanceSecond = Singleton.getInstance();
 
-console.info(instanceFirst);
-console.info(instanceSecond);
+console.table([instanceFirst, instanceSecond]);
+
+// es6
+class DBConnection {
+  constructor(conStr) {
+    this.conStr = conStr;
+  }
+
+  static getInstance(conStr) {
+    if (!this.instance) {
+      this.instance = new DBConnection(conStr);
+    }
+
+    return this.instance;
+  }
+}
+
+let con1 = DBConnection.getInstance("mysqldb1");
+let con2 = DBConnection.getInstance("mysqldb2");
+
+console.table([con1.conStr, con2.conStr]);

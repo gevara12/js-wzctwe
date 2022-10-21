@@ -17,11 +17,11 @@ class Person {
   }
 }
 
-const person = new Person("Elena", "Perovskaya");
-person.fullName;
-person.fullName = 'Penis Dushilin';
-person.fullName;
-person.SOME();
+// const person = new Person("Elena", "Perovskaya");
+// person.fullName;
+// person.fullName = 'Penis Dushilin';
+// person.fullName;
+// person.SOME();
 
 
 class Worker {
