@@ -2,5 +2,8 @@
   "name": "js",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "node": "^19.0.0",
+    "nodemon": "^2.0.20"
+  }
 }
